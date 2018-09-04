@@ -1,6 +1,7 @@
 package br.inf.ufg.sd;
 
 import java.io.IOException;
+import java.text.DecimalFormat;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,33 +10,26 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/CategoriaNadadorCt")
-public class CategoriaNadadorCt extends Controler{
+@WebServlet("/CreditoCt")
+public class CreditoCt extends HttpServlet{
 
 	private static final long serialVersionUID = 1L;
 	
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String PAGINA_ACAO = "/CategoriaNadador.jsp";
+		String PAGINA_ACAO = "/Credito.jsp";
 		
-		String idade = request.getParameter("idade");		
-		int idadeNadador =  Integer.parseInt(idade);
+		String saldo1 = request.getParameter("saldo");
+		double saldo = Double.parseDouble(saldo1);
 		
-		CategoriaNadadorNe resposta = new CategoriaNadadorNe();
-		String resultado = resposta.verificaCategoriaNadador(idadeNadador);
-		
-		try {
-			montaRetornoJSON(response, "{\"mensagem\": \"" + resultado + "\"}");
-		} catch (JSONException e) {
-			
-			e.printStackTrace();
-		}
+		CreditoNe resposta = new CreditoNe();
+		String resultado = resposta.calculaCredito(saldo);
 				
 		// Finaliza o despacho para o jsp
-		/*request.setAttribute("resultado", resultado);
+		request.setAttribute("resultado", resultado);
 		RequestDispatcher dis = request.getRequestDispatcher(PAGINA_ACAO);
-		dis.include(request, response);*/
+		dis.include(request, response);
 		
 	}
 }

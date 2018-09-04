@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/PesoIdealCt")
-public class PesoIdealCt extends Controler{
+public class PesoIdealCt extends HttpServlet{
 
 	private static final long serialVersionUID = 1L;
 	
@@ -34,18 +34,13 @@ public class PesoIdealCt extends Controler{
 			mensagem="Sexo informado é inválido";
 		}
 		
-		try {
-			montaRetornoJSON(response, "{\"mensagem\": \"" + resultado + "\"}");
-		} catch (JSONException e) {
-			
-			e.printStackTrace();
-		}
+		
 		
 				
 		// Finaliza o despacho para o jsp
-		/*request.setAttribute("resultado", resultado);
+		request.setAttribute("resultado", resultado);
 		RequestDispatcher dis = request.getRequestDispatcher(PAGINA_ACAO);
-		dis.include(request, response);*/
+		dis.include(request, response);
 		
 	}
 }

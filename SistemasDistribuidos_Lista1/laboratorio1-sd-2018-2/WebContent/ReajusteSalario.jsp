@@ -21,28 +21,55 @@
 			        	<h3><small>Cargo</small></h3>	
 			        	<h3><small>Salário</small></h3>	        	 
 			        </div>
-			        <form action="CalculaReajusteCt" method="POST">
+			        <form action="CalculaReajusteCt" method="POST" id="Formulario">
 				        <div class="col-xs-8"> 
 				        	<input class="form-control" type="text" name="nome"  placeholder="Nome" id= "nome" required oninvalid="setCustomValidity('Por favor, preencha o nome')" onchange="try{setCustomValidity('')}catch(e){}" autofocus="" style="margin-bottom: 10px;">
 				        	<input class="form-control" type="text" name="cargo"  placeholder="Cargo" id = "cargo" required oninvalid="setCustomValidity('Por favor, informe o cargo')" onchange="try{setCustomValidity('')}catch(e){}" style="margin-bottom: 10px;">
 							<input class="form-control" type="text" name="salario"  placeholder="Salario" id = "salario" required oninvalid="setCustomValidity('Por favor, informe o salário')" onchange="try{setCustomValidity('')}catch(e){}" style="margin-bottom: 10px;">								   			
 				      	</div>
 				      	<div class= "col-xs-12">
-				        		<button type="submit" class="btn btn-primary btn-lg btn-block" name="btn-calc" value="calc">Calcular</button>
+				        		<button type="submit" class="btn btn-primary btn-lg btn-block" name="calcular" value="calc">Calcular</button>
 				        		
 				        </div> 
 			        </form>	 
 		        </div>
 		    </div>
 		    
-		    				<div class="div col-xs-12">
+		    				<%-- <div class="div col-xs-12">
 		    					<strong>
 			    					<%if(request.getAttribute("resultado")!=null){ %>
 										<%=request.getAttribute("resultado")%>
 									<% } %>
 								</strong>
+							</div> --%>
+							<div class="div col-xs-12">
+		    					<strong id="mensagem">
+			    					
+								</strong>
 							</div>
+							
 		</div>
-	</div>		
+	</div>	
+ 	<script type="text/javascript">
+	
+ 	$("#Formulario").submit(function(e) {
+
+	    var form = $(this);
+	    var url = form.attr('action');
+
+	    $.ajax({
+	           type: "POST",
+	           url: url,
+	           data: form.serialize(), // serializa os dados do form
+	           success: function(data)
+	           {
+	               $('#mensagem').text(data.mensagem);
+	           }
+	         });
+	    e.preventDefault(); 
+	});
+ 	
+ 
+	</script> 	
 </body>
 </html>

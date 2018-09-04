@@ -1,17 +1,14 @@
 package br.inf.ufg.sd;
 
 import java.io.IOException;
-import java.text.DecimalFormat;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/CalculaReajusteCt")
-public class CalculaReajusteCt extends HttpServlet{
+public class CalculaReajusteCt extends Controler {
 
 	private static final long serialVersionUID = 1L;
 	
@@ -26,11 +23,19 @@ public class CalculaReajusteCt extends HttpServlet{
 		
 		CalculaReajusteNe resposta = new CalculaReajusteNe();
 		String resultado = resposta.calcularReajuste(nome, cargo, salario);
+		
+		try {
+			montaRetornoJSON(response, "{\"mensagem\": \"" + resultado + "\"}");
+		} catch (JSONException e) {
+			
+			e.printStackTrace();
+		}
 				
-		// Finaliza o despacho para o jsp
-		request.setAttribute("resultado", resultado);
+		// Finaliza o despacho para o jsp 
+		// Para usar o dispatcher comente o trecho do método montaRetornoJSON para não enviar objeto para o jsp.
+		/*request.setAttribute("resultado", resultado);
 		RequestDispatcher dis = request.getRequestDispatcher(PAGINA_ACAO);
-		dis.include(request, response);
+		dis.include(request, response);*/
 		
 	}
 }
