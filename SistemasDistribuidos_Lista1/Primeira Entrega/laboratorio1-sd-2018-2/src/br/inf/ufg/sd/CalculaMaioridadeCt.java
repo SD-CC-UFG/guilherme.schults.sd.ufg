@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import br.inf.ufg.sd.CalculaMaioridadeNe;
 
 @WebServlet("/CalculaMaioridadeCt")
-public class CalculaMaioridadeCt extends HttpServlet {
+public class CalculaMaioridadeCt extends Controler {
 
 	private static final long serialVersionUID = 1L;
 	
@@ -39,10 +39,18 @@ public class CalculaMaioridadeCt extends HttpServlet {
 			mensagem="Sexo informado é inválido";
 			
 		}
+		
+		try {
+			montaRetornoJSON(response, "{\"mensagem\": \"" + resultado + "\"}");
+		} catch (JSONException e) {
+			
+			e.printStackTrace();
+		}
+		
 		// Finaliza o despacho para o jsp
-		request.setAttribute("resultado", resultado);
+		/*request.setAttribute("resultado", resultado);
 		RequestDispatcher dis = request.getRequestDispatcher(PAGINA_ACAO);
-		dis.include(request, response);
+		dis.include(request, response);*/
 	}
 
 }

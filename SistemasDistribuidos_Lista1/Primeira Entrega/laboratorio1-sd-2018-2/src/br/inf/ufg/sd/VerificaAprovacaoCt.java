@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/VerificaAprovacaoCt")
-public class VerificaAprovacaoCt extends HttpServlet{
+public class VerificaAprovacaoCt extends Controler{
 
 	private static final long serialVersionUID = 1L;
 	
@@ -27,11 +27,18 @@ public class VerificaAprovacaoCt extends HttpServlet{
 		
 		VerificaAprovacaoNe resposta = new VerificaAprovacaoNe();
 		String resultado = resposta.verificaAprovacaoAluno(nota1, nota2, nota3);
-				
+		
+		try {
+			montaRetornoJSON(response, "{\"mensagem\": \"" + resultado + "\"}");
+		} catch (JSONException e) {
+			
+			e.printStackTrace();
+		}
+		
 		// Finaliza o despacho para o jsp
-		request.setAttribute("resultado", resultado);
+		/*request.setAttribute("resultado", resultado);
 		RequestDispatcher dis = request.getRequestDispatcher(PAGINA_ACAO);
-		dis.include(request, response);
+		dis.include(request, response);*/
 		
 	}
 }
