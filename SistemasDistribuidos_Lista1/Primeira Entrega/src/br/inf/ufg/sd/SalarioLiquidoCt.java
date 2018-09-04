@@ -27,18 +27,11 @@ public class SalarioLiquidoCt extends Controler{
 		
 		SalarioLiquidoNe resposta = new SalarioLiquidoNe();
 		String resultado = resposta.calculaSalarioLiquido(nome, nivel, salarioBruto, dependentes);
-		
-		try {
-			montaRetornoJSON(response, "{\"mensagem\": \"" + resultado + "\"}");
-		} catch (JSONException e) {
-			
-			e.printStackTrace();
-		}
 				
 		// Finaliza o despacho para o jsp
-		/*request.setAttribute("resultado", resultado);
+		request.setAttribute("resultado", resultado);
 		RequestDispatcher dis = request.getRequestDispatcher(PAGINA_ACAO);
-		dis.include(request, response);*/
+		dis.include(request, response);
 		
 	}
 }

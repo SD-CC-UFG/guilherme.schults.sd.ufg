@@ -35,41 +35,16 @@
 		        </div>
 		    </div>
 		    
-		    				<%-- <div class="div col-xs-12">
+		    				 <div class="div col-xs-12">
 		    					<strong>
 			    					<%if(request.getAttribute("resultado")!=null){ %>
 										<%=request.getAttribute("resultado")%>
 									<% } %>
 								</strong>
-							</div> --%>
-							<div class="div col-xs-12">
-		    					<strong id="mensagem">
-			    					
-								</strong>
 							</div>
+						
 							
 		</div>
-	</div>	
- 	<script type="text/javascript">
-	
- 	$("#Formulario").submit(function(e) {
-
-	    var form = $(this);
-	    var url = form.attr('action');
-
-	    $.ajax({
-	           type: "POST",
-	           url: url,
-	           data: form.serialize(), // serializa os dados do form
-	           success: function(data)
-	           {
-	               $('#mensagem').text(data.mensagem);
-	           }
-	         });
-	    e.preventDefault(); 
-	});
- 	
- 
-	</script> 	
+	</div>	 	
 </body>
 </html>
