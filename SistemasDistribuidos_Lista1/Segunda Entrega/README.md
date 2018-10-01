@@ -1,4 +1,1 @@
-# SistemasDistribuidos_Lista1
-1ª Lista de exercícios de Sistemas Distribuídos - UFG 2018/2
-
-Arquitetura Cliente-Servidor onde a resposta enviada para o cliente é realizada através de objeto JSON.
+Segunda entrega refere-se a lista 1 de SD, onde foi utilizado a arquitetura cliente servidor, e o retorno de resposta para o cliente é realizado utilizando objetos JSON.
