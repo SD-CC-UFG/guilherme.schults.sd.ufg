@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="SistemasDistribuidos_Lista1/laboratorio1-sd-2018-2/laboratorio1-sd-2018-2/src"/>
+	<classpathentry kind="src" path="SistemasDistribuidos_Lista1/laboratorio1-sd-2018-2/src"/>
+	<classpathentry kind="lib" path="SistemasDistribuidos_Lista1/laboratorio1-sd-2018-2/laboratorio1-sd-2018-2/WebContent/WEB-INF/lib/javax.servlet.jar"/>
+	<classpathentry kind="lib" path="SistemasDistribuidos_Lista1/laboratorio1-sd-2018-2/WebContent/WEB-INF/lib/javax.servlet.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="output" path="SistemasDistribuidos_Lista1/laboratorio1-sd-2018-2/laboratorio1-sd-2018-2/build/classes"/>
+</classpath>

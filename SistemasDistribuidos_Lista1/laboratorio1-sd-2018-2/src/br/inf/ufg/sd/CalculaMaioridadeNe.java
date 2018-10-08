@@ -4,10 +4,8 @@ public class CalculaMaioridadeNe {
 	
 	public String verificaMaioridade(String sexo, int idade) {
 		
-		String resultado="";
 		String mensagem="";
-		
-
+	
 		if(sexo.equalsIgnoreCase("M") && idade >= 18) {
 			mensagem="Usuario informado é maior de idade";
 		} else if(sexo.equalsIgnoreCase("M") && idade < 18) {
@@ -19,7 +17,7 @@ public class CalculaMaioridadeNe {
 		} else {
 			mensagem="Dados incorretos";
 		}
-		return resultado = mensagem;	
+		return mensagem;	
 	}
 	
 }
