@@ -2,11 +2,11 @@
 
 Primeira Entrega:
 
-Desenvolvido utilizando a arquitetura cliente servidor.
+Desenvolvido utilizando a arquitetura cliente servidor retornando html.
 
 Segunda Entrega:
 
-Desenvolvido a utilizando a arquiteutra cliente servidor porém retornando um JSON para o usuário.
+Desenvolvido a utilizando a arquitetura cliente servidor porém retornando um JSON para o usuário.
 
 Terceira Entrega:
 
