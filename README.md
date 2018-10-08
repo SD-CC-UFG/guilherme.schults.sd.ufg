@@ -6,7 +6,7 @@ Desenvolvido utilizando a arquitetura cliente servidor retornando html.
 
 Segunda Entrega:
 
-Desenvolvido a utilizando a arquitetura cliente servidor porém retornando um JSON para o usuário.
+Desenvolvido utilizando a arquitetura cliente servidor porém retornando um JSON para o usuário.
 
 Terceira Entrega:
 
