@@ -39,6 +39,8 @@ public class CalculaMaioridadeCt extends HttpServlet {
 			mensagem="Sexo informado é inválido";
 			
 		}
+		
+		
 		// Finaliza o despacho para o jsp
 		request.setAttribute("resultado", resultado);
 		RequestDispatcher dis = request.getRequestDispatcher(PAGINA_ACAO);

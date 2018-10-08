@@ -26,6 +26,8 @@ public class AposentadoriaCt extends HttpServlet{
 		
 		AposentadoriaNe resposta = new AposentadoriaNe();
 		String resultado = resposta.calculaAposentadoria(idade, tempoServico, sexo);
+		
+		
 				
 		// Finaliza o despacho para o jsp
 		request.setAttribute("resultado", resultado);

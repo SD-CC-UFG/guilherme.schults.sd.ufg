@@ -10,22 +10,24 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/CreditoCt")
-public class CreditoCt extends HttpServlet{
+@WebServlet("/VerificaAprovacaoCt")
+public class VerificaAprovacaoCt extends Controler{
 
 	private static final long serialVersionUID = 1L;
 	
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String PAGINA_ACAO = "/Credito.jsp";
+		String PAGINA_ACAO = "/VerificaAprovacao.jsp";
+			
+		String nome =  request.getParameter("nome");
+		double nota1 = Double.parseDouble(request.getParameter("nota1"));
+		double nota2 = Double.parseDouble(request.getParameter("nota2"));
+		double nota3 = Double.parseDouble(request.getParameter("nota2"));
 		
-		String saldo1 = request.getParameter("saldo");
-		double saldo = Double.parseDouble(saldo1);
+		VerificaAprovacaoNe resposta = new VerificaAprovacaoNe();
+		String resultado = resposta.verificaAprovacaoAluno(nota1, nota2, nota3);
 		
-		CreditoNe resposta = new CreditoNe();
-		String resultado = resposta.calculaCredito(saldo);
-				
 		// Finaliza o despacho para o jsp
 		request.setAttribute("resultado", resultado);
 		RequestDispatcher dis = request.getRequestDispatcher(PAGINA_ACAO);

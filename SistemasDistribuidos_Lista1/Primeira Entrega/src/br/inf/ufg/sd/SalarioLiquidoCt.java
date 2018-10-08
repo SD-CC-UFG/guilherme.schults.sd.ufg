@@ -9,33 +9,24 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/PesoIdealCt")
-public class PesoIdealCt extends HttpServlet{
+@WebServlet("/SalarioLiquidoCt")
+public class SalarioLiquidoCt extends Controler{
 
 	private static final long serialVersionUID = 1L;
 	
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String PAGINA_ACAO = "/PesoIdeal.jsp";
+		String PAGINA_ACAO = "/SalarioLiquido.jsp";
 			
-		String altura =  request.getParameter("altura");
-		String sexo =  request.getParameter("sexo");		
-		
-		PesoIdealNe resposta = new PesoIdealNe();
-		String resultado="";
-		String mensagem="";
-		
-		if(request.getParameter("sexo").equalsIgnoreCase("masculino") && request.getParameter("sexo") != null) {
-			resultado = resposta.calculaPesoIdeal(altura, sexo);
-		} else if(request.getParameter("sexo").equalsIgnoreCase("feminino") && request.getParameter("sexo") != null) {
-			resultado = resposta.calculaPesoIdeal(altura, sexo);
-		} else {
-			mensagem="Sexo informado é inválido";
-		}
+		String nome =  request.getParameter("nome");
+		String nivel = request.getParameter("nivel");
+		double salarioBruto =  Double.parseDouble(request.getParameter("salarioBruto"));
+		int dependentes = Integer.parseInt(request.getParameter("dependentes"));
 		
 		
-		
+		SalarioLiquidoNe resposta = new SalarioLiquidoNe();
+		String resultado = resposta.calculaSalarioLiquido(nome, nivel, salarioBruto, dependentes);
 				
 		// Finaliza o despacho para o jsp
 		request.setAttribute("resultado", resultado);

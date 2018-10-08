@@ -36,15 +36,15 @@
 				</div>
 		    </div>
 		    
-		    				<div class="div col-xs-12">
+		    			 	<div class="div col-xs-12">
 		    					<%if(request.getAttribute("resultado")!=null){ %>
 									<%=request.getAttribute("resultado")%>
 								<% } %>
-							</div>
+							</div> 
+							
+							
 		</div>
-	</div>
-	
-
+	</div>	
 <script src="js/validate.js"></script>
 			
 </body>

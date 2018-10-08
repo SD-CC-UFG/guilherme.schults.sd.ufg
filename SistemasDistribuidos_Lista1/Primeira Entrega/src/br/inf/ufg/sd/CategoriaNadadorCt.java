@@ -9,24 +9,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/SalarioLiquidoCt")
-public class SalarioLiquidoCt extends HttpServlet{
+@WebServlet("/CategoriaNadadorCt")
+public class CategoriaNadadorCt extends Controler{
 
 	private static final long serialVersionUID = 1L;
 	
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String PAGINA_ACAO = "/SalarioLiquido.jsp";
-			
-		String nome =  request.getParameter("nome");
-		String nivel = request.getParameter("nivel");
-		double salarioBruto =  Double.parseDouble(request.getParameter("salarioBruto"));
-		int dependentes = Integer.parseInt(request.getParameter("dependentes"));
+		String PAGINA_ACAO = "/CategoriaNadador.jsp";
 		
+		String idade = request.getParameter("idade");		
+		int idadeNadador =  Integer.parseInt(idade);
 		
-		SalarioLiquidoNe resposta = new SalarioLiquidoNe();
-		String resultado = resposta.calculaSalarioLiquido(nome, nivel, salarioBruto, dependentes);
+		CategoriaNadadorNe resposta = new CategoriaNadadorNe();
+		String resultado = resposta.verificaCategoriaNadador(idadeNadador);
 				
 		// Finaliza o despacho para o jsp
 		request.setAttribute("resultado", resultado);
