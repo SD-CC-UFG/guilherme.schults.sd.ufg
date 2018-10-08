@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="guilherme.schults.sd.ufg">
-        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/SistemasDistribuidos_Lista1/laboratorio1-sd-2018-2/laboratorio1-sd-2018-2/src"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/SistemasDistribuidos_Lista1/laboratorio1-sd-2018-2/src"/>
-        <property name="context-root" value="guilherme.schults.sd.ufg"/>
-        <property name="java-output-path" value="/guilherme.schults.sd.ufg/SistemasDistribuidos_Lista1/laboratorio1-sd-2018-2/laboratorio1-sd-2018-2/build/classes"/>
-    </wb-module>
-</project-modules>
