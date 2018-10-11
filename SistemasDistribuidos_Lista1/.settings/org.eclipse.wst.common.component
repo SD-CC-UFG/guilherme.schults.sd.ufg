@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="SistemasDistribuidos_Lista1">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Primeira Entrega/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Segunda Entrega/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Terceira Entrega/src"/>
+        <property name="context-root" value="SistemasDistribuidos_Lista1"/>
+        <property name="java-output-path" value="/SistemasDistribuidos_Lista1/Primeira Entrega/build/classes"/>
+    </wb-module>
+</project-modules>

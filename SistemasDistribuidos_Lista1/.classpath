@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Primeira Entrega/src"/>
+	<classpathentry kind="src" path="Segunda Entrega/src"/>
+	<classpathentry kind="src" path="Terceira Entrega/src"/>
+	<classpathentry kind="lib" path="Primeira Entrega/WebContent/WEB-INF/lib/javax.servlet.jar"/>
+	<classpathentry kind="lib" path="Segunda Entrega/WebContent/WEB-INF/lib/javax.servlet.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="output" path="Primeira Entrega/build/classes"/>
+</classpath>
